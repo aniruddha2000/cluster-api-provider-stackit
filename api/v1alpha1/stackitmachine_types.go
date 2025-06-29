@@ -68,8 +68,6 @@ type ShareNetwork struct {
 	Enabled bool `json:"enabled"`
 }
 
-// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
-
 // NodeStatus contains information about Node related resources.
 type NodeStatus struct {
 	// KeyName is the name of the SSH key.
