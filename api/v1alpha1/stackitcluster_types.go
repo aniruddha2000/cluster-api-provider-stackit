@@ -44,6 +44,16 @@ type STACKITClusterSpec struct {
 	// configured on every shoot machine at boot time (and reconciled while its running).
 	// +optional
 	RegistryCaches []RegistryCacheConfiguration `json:"registryCaches,omitempty"`
+
+	STACKITToken *STACKITToken `json:"stackitToken,,omitempty"`
+}
+
+type STACKITToken struct {
+	// Name of the secret.
+	Name string `json:"name,omitempty"`
+
+	// Key is the name of the key in the secret.
+	Key string `json:"key,omitempty"`
 }
 
 // ETCD is an etcd configuration.
